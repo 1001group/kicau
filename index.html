@@ -1,0 +1,106 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kicau Mania</title>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+(function () {  
+  var PIXEL_ID = '910051731937166';
+  var DESTINATION_URL = 'index.html';
+  var REDIRECT_DELAY_MS = 150;
+
+  function rand() {    
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();    
+    return 'eid_' + Date.now() + '_' + Math.random().toString(36).slice(2, 12);  
+  }
+
+  function setCookie(name, value, days) {    
+    var d = new Date();    
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));    
+    document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';  
+  }
+
+  function getCookie(name) {    
+    var match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '=([^;]*)'));    
+    return match ? decodeURIComponent(match[1]) : '';  
+  }
+
+  function ensureFbp() {    
+    var fbp = getCookie('_fbp');    
+    if (!fbp) {      
+      fbp = 'fb.1.' + Date.now() + '.' + Math.floor(Math.random() * 1e10);      
+      setCookie('_fbp', fbp, 90);    
+    }    
+    return fbp;  
+  }
+
+  function ensureFbc(searchParams) {    
+    var fbc = getCookie('_fbc');    
+    var fbclid = searchParams.get('fbclid') || '';    
+    if (!fbc && fbclid) {      
+      fbc = 'fb.1.' + Date.now() + '.' + fbclid;      
+      setCookie('_fbc', fbc, 90);    
+    }    
+    return fbc || '';  
+  }
+
+  function ensureCid() {    
+    var cid = getCookie('_cid');    
+    if (!cid) { cid = rand(); setCookie('_cid', cid, 90); }    
+    return cid;  
+  }
+
+  function ensureSid() {    
+    var sid = sessionStorage.getItem('_sid');    
+    if (!sid) { sid = rand(); sessionStorage.setItem('_sid', sid); }    
+    return sid;  
+  }
+
+  function buildRedirectUrl() {    
+    var current = new URL(window.location.href);    
+    var dest = new URL(DESTINATION_URL);
+
+    current.searchParams.forEach(function (value, key) {      
+      if (!dest.searchParams.has(key)) { dest.searchParams.set(key, value); }    
+    });
+
+    var cid = ensureCid();    
+    var sid = ensureSid();    
+    if (!dest.searchParams.has('cid')) dest.searchParams.set('cid', cid);    
+    if (!dest.searchParams.has('sid')) dest.searchParams.set('sid', sid);
+
+    return dest.toString();  
+  }
+
+  var currentUrl = new URL(window.location.href);  
+  var fbp = ensureFbp();  
+  var fbc = ensureFbc(currentUrl.searchParams);  
+  var cid = ensureCid();  
+  var sid = ensureSid();  
+  var pageId = rand();
+
+  var pageViewEventID = 'pv_' + pageId;  
+  fbq('init', PIXEL_ID);
+
+  var params = {    
+    page_location: location.href,    
+    page_path: location.pathname + location.search,    
+    page_title: document.title || '',    
+    referrer: document.referrer || '',    
+    fbp: fbp || undefined,    
+    fbc: fbc || undefined,    
+    cid: cid,    
+    sid: sid,    
+    page_id: pageId  
+  };
+
+  fbq('track', 'PageView', params, { eventID: pageViewEventID });
+
+  setTimeout(function () {    
+    window.location.replace(buildRedirectUrl());  
+  }, REDIRECT_DELAY_MS);
+
+})();
+</script>
